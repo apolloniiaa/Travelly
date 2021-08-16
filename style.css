@@ -2,15 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-
+@font-face {
+  font-family: 'Ruhl Medium';
+  src: url('./fonts/MADE\ Bon\ Voyage\ Thin\ PERSONAL\ USE.otf') format('woff2');
+}
 h1 {
   font-size: 2.6rem;
 }
@@ -19,36 +24,49 @@ button,
 label,
 input,
 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 h2 {
-  font-size: 4.8rem;
+  font-size: 5rem;
+  font-family: 'Ruhl Medium';
+  letter-spacing: 1rem;
+  color: white;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: normal;
 }
 h4,
 h5 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-family: 'Ruhl Medium';
 }
 a {
   color: white;
   text-decoration: none;
+  font-family: 'Ruhl Medium';
+  font-size: 2rem;
+}
+a:hover {
+  border-bottom: 1px solid #d8d8d8;
+  border-top: 1px solid #d8d8d8;
 }
 button {
-  padding: 2rem 6rem;
-  background: #4c6e97;
+  padding: 1.5rem 4rem;
+  font-family: 'Ruhl Medium';
+  background: rgb(134, 171, 216, 0.5);
   border: none;
   color: white;
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: background 0.5s ease-in-out;
+  border: 1.5px dotted rgba(255, 255, 255, 0.38);
 }
 button:hover {
   background: #27394e;
+  transition: 1s ease-in;
+  outline: none;
 }
-
 .main-head {
   background: #131c27;
   color: white;
@@ -65,7 +83,6 @@ nav {
   align-items: center;
   flex-wrap: wrap;
 }
-
 nav ul {
   display: flex;
   flex: 1 1 40rem;
@@ -75,14 +92,13 @@ nav ul {
 }
 #logo {
   flex: 2 1 40rem;
-  font-family: "Pattaya", sans-serif;
+  font-family: 'Pattaya', sans-serif;
   font-weight: 400;
 }
-
 .hero {
   min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url("./img/landing-page.jpg");
+    url('./img/landing-page.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -96,11 +112,10 @@ nav ul {
 .hero h3 {
   padding: 5rem;
 }
-
 #locations {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("./img/new-york-page.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.386), transparent),
+    url('./img/new-york-page.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -111,19 +126,20 @@ nav ul {
 .locations-head {
   width: 90%;
   margin: auto;
+  font-family: 'Ruhl Medium';
 }
 .locations-head h2 {
   padding: 1rem 0rem;
   text-decoration: underline;
 }
-.locations-head h3 {
+.locations-head > h3 {
   padding: 4rem 0rem;
-  background: linear-gradient(#131c27, #663b34);
+  font-size: 2.5rem;
+  background: linear-gradient(#b3b3b3, #2a1411);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-
 .cloud {
   position: absolute;
   top: 0%;
@@ -162,7 +178,6 @@ nav ul {
 .benefits-head h3 {
   padding: 1rem;
 }
-
 .cards {
   width: 90%;
   margin: auto;
@@ -170,8 +185,8 @@ nav ul {
   min-height: 70vh;
   align-items: center;
   flex-wrap: wrap;
+  font-family: 'Ruhl Medium' !important;
 }
-
 .card {
   text-align: center;
   flex: 1 1 25rem;
@@ -179,7 +194,6 @@ nav ul {
   margin: 2rem 5rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
 }
-
 .cards img {
   max-width: 15%;
   margin: 2rem;
@@ -188,30 +202,27 @@ nav ul {
 .card p {
   padding: 1rem;
   line-height: 1.8;
+  font-family: 'Ruhl Medium' !important;
 }
-
 .card-icon {
-  background: #27394e;
+  background: #0e2034;
 }
-
 #contact {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("./img/contact-mountain.png");
+    url('./img/contact-mountain.png');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .form-wrapper {
   background: rgba(19, 28, 39, 0.8);
   width: 60%;
   color: white;
   border-radius: 20px;
 }
-
 .form-head {
   text-align: center;
   padding: 4rem;
@@ -231,11 +242,9 @@ nav ul {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-
 .form-wrapper input {
   padding: 1rem 3rem;
 }
-
 footer {
   color: white;
   background: rgba(19, 28, 39, 1);
@@ -259,9 +268,8 @@ footer ul {
   justify-content: space-between;
   align-items: center;
 }
-
 button:focus {
-  background: #2c3f57;
+  background: #2c3f5787;
   outline-style: solid;
   outline-color: cornflowerblue;
 }
